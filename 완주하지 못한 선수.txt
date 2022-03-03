@@ -1,0 +1,12 @@
+def solution(participant, completion):
+    dict = {}
+    for i in participant:
+        try : dict[i] += 1
+        except: dict[i] = 1
+    for j in completion:
+        if j in dict:
+            dict[j] -= 1
+            if dict[j] == 0 :
+                del dict[j]
+                
+    return list(dict.keys())[0]
