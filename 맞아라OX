@@ -1,0 +1,15 @@
+# 이퍼 문제
+
+def solution(result) :
+  count = 0
+  total = 0
+  for i in result :
+    if i == 'O' :
+      count += 1
+      total += count
+    else :
+      count = 0
+
+  return total
+
+solution('OOXXOXXOOO')
