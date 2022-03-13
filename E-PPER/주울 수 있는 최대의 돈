@@ -1,0 +1,15 @@
+#17회
+
+def solution(n,m):
+  dp = [0]*3001
+  dp[1] = m[0]
+  if n>1 :
+    dp[2] = m[0] + m[1]
+  if n>2 :
+    for i in range(3, n+1):
+      dp[i] = max(dp[i-3]+m[i-1]+m[i-2], dp[i-2]+m[i-1], dp[i-1])
+  return dp[n]
+
+n = int(input())
+m = list(map(int, input().split()))
+print(solution(n,m))
