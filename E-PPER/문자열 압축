@@ -1,0 +1,17 @@
+#17회
+
+def solution() :
+  count = 0
+  answer = ''
+
+  if str[0] == '1' :
+    temp += 1
+
+  for i in range(len(str)-1) :
+    if str[i] != str[i+1] :
+      answer += chr(ord('A') + count)
+      count = 0
+    else :
+      count += 1
+  answer += chr(ord('A') + count) //마지막 전 문자와 마지막 문자가 다르면 count가 0이 될거고 그러면 여기서 answer이 A가 됨
+  return answer
